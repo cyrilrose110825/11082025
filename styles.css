@@ -5,6 +5,8 @@ body {
     background: #fff;
     width: 100vw;
     height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Welcome Screen */
@@ -36,21 +38,25 @@ body {
     color: white;
 }
 
-/* Navigation (fixed at top-right ALWAYS) */
+/* Navigation (fixed height, always visible) */
 nav {
     position: fixed;
     top: 0;
     right: 0;
+    left: 0;
+    height: 60px;
     padding: 10px 20px;
     background: rgba(0,0,0,0.7);
     z-index: 2000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
     gap: 0.5em;
 }
 nav li {
@@ -66,18 +72,18 @@ nav li:hover {
 
 /* Pages */
 main {
+    position: absolute;
+    top: 60px; /* exactly below the menu */
+    left: 0;
     width: 100vw;
-    height: 100dvh;
-    position: relative;
-    padding-top: 60px; /* creates space for menu */
-    box-sizing: border-box;
+    height: calc(100dvh - 60px); /* fills remaining screen */
 }
 .page {
     position: absolute;
     top: 0;
     left: 100%;
     width: 100%;
-    height: calc(100dvh - 60px); /* fit below menu */
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
