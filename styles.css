@@ -132,37 +132,3 @@ main {
 .arrow-right {
     right: 0;
 }
-.guides-container {
-    position: relative;
-    display: inline-block;
-}
-
-.guides-container img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-.guides-link {
-    position: absolute;
-    color: #0000EE; /* typical link color */
-    text-decoration: underline;
-    font-size: clamp(0.8rem, 3vw, 1rem);
-    font-weight: bold;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.5); /* faint background to stand out */
-    padding: 2px 4px;
-    border-radius: 3px;
-}
-
-/* Positioning the links (adjust as needed) */
-.guides-link.rsvp {
-    top: 65%;   /* adjust this based on where RSVP text is in the image */
-    left: 30%;
-}
-
-.guides-link.location {
-    top: 80%;   /* adjust this based on where Location text is */
-    left: 30%;
-}
-
