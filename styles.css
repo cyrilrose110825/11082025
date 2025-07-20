@@ -1,12 +1,11 @@
-body {
+html, body {
     margin: 0;
-    font-family: 'Georgia', serif;
-    overflow: hidden;
-    background: #fff;
+    padding: 0;
     width: 100vw;
     height: 100dvh;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden; /* prevents scrolling/blank spaces */
+    font-family: 'Georgia', serif;
+    background: #fff;
 }
 
 /* Welcome Screen */
