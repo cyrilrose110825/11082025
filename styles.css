@@ -132,3 +132,36 @@ main {
 .arrow-right {
     right: 0;
 }
+
+/* RSVP Page */
+.rsvp-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+.invite-button {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: bold;
+    color: #567a52;
+    border: 3px solid #567a52;
+    padding: 15px 40px;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.invite-button:hover {
+    background: #567a52;
+    color: white;
+}
+
+.invite-button:active {
+    transform: scale(0.95);
+}
