@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyril & Rose Wedding Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen">
+        <div class="welcome-text">You're Invited!</div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="assets/audio/background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li data-target="home">CYRIL & ROSE</li>
+            <li data-target="entourage1">Entourage</li>
+            <li data-target="entourage2">Entourage</li>
+            <li data-target="guides">Guides</li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section id="home" class="page active">
+            <img src="assets/images/section1.png" alt="Main Invite" />
+        </section>
+        <section id="entourage1" class="page">
+            <img src="assets/images/section2.png" alt="Entourage 1" />
+        </section>
+        <section id="entourage2" class="page">
+            <img src="assets/images/section3.png" alt="Entourage 2" />
+        </section>
+        <section id="guides" class="page">
+            <img src="assets/images/section4.png" alt="Guides" />
+        </section>
+    </main>
+</body>
+</html>
