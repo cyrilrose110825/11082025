@@ -38,19 +38,18 @@ body {
     color: white;
 }
 
-/* Navigation (fixed height, always visible) */
+/* Navigation (same width as page) */
 nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
+    width: 100%;
+    max-width: 100%;
     height: 60px;
-    padding: 10px 20px;
     background: rgba(0,0,0,0.7);
     z-index: 2000;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 nav ul {
     list-style: none;
@@ -58,25 +57,26 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 0.5em;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 100%;
 }
 nav li {
     color: white;
     cursor: pointer;
     font-weight: bold;
     transition: color 0.3s ease;
-    font-size: 0.9em;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 nav li:hover {
     color: #ccc;
 }
 
-/* Pages */
+/* Pages (full screen below menu) */
 main {
-    position: absolute;
-    top: 60px; /* exactly below the menu */
-    left: 0;
-    width: 100vw;
-    height: calc(100dvh - 60px); /* fills remaining screen */
+    width: 100%;
+    height: calc(100dvh - 60px);
+    position: relative;
 }
 .page {
     position: absolute;
