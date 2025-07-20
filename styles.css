@@ -100,15 +100,16 @@ main {
     opacity: 1;
     z-index: 1000;
 }
-/* Arrows (rectangular, edge-aligned) */
+/* Arrows (rectangular, half-page height, smaller size) */
 .arrow {
     position: absolute;
-    top: 0;
-    width: 50px;
-    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; /* narrower */
+    height: 50%; /* half of the page height */
     background: rgba(0, 0, 0, 0.2);
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem; /* smaller arrow */
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -117,6 +118,7 @@ main {
     z-index: 1500;
     user-select: none;
     transition: background 0.3s ease;
+    border-radius: 5px; /* optional: slight rounded corners */
 }
 
 .arrow:hover {
