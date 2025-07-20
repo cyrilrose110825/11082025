@@ -4,7 +4,7 @@ body {
     overflow: hidden;
     background: #fff;
     width: 100vw;
-    height: 100dvh; /* dynamic viewport height for mobile */
+    height: 100dvh;
 }
 
 /* Welcome Screen */
@@ -22,7 +22,7 @@ body {
     cursor: pointer;
 }
 .welcome-text {
-    font-size: clamp(1.5rem, 5vw, 2.5rem); /* scales on mobile */
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     font-weight: bold;
     color: #567a52;
     border: 3px solid #567a52;
@@ -36,7 +36,7 @@ body {
     color: white;
 }
 
-/* Navigation */
+/* Navigation (fixed at top-right ALWAYS) */
 nav {
     position: fixed;
     top: 0;
@@ -67,15 +67,17 @@ nav li:hover {
 /* Pages */
 main {
     width: 100vw;
-    height: 100dvh; /* ensures full screen always */
+    height: 100dvh;
     position: relative;
+    padding-top: 60px; /* creates space for menu */
+    box-sizing: border-box;
 }
 .page {
     position: absolute;
     top: 0;
     left: 100%;
-    width: 100vw;
-    height: 100dvh;
+    width: 100%;
+    height: calc(100dvh - 60px); /* fit below menu */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,7 +88,7 @@ main {
 .page img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* keeps the whole image visible */
+    object-fit: contain;
 }
 .page.active {
     left: 0;
